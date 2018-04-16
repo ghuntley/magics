@@ -1,4 +1,6 @@
 let
+  localOverlays = import ../overlays;
+  nixpkgs = import <nixpkgs> { overlays = [ localOverlays ]; };
 
   masterInstanceSettings = [
     { id = 0; name = "master-0"; } 
